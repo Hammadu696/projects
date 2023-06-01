@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <title>Registration Form</title>
+</h:head>
+
+<h:body>
+        <h:form>
+            <h2>Registration Form</h2>
+                <br/>
+                <h:outputLabel for="firstName">First Name</h:outputLabel>
+                <h:inputText id="firstName" value="#{registration.firstName}" required="true" />
+            <br/>
+
+                <h:outputLabel for="surname">Surname</h:outputLabel>
+                <h:inputText id="surname" value="#{registration.surname}" required="true" />
+            <br/>
+
+
+                <h:outputLabel for="mobile">Mobile Number</h:outputLabel>
+                <h:inputText id="mobile" value="#{registration.mobileNumber}" required="true" />
+            <br/>
+
+
+                <h:outputLabel for="password">Password</h:outputLabel>
+                <h:inputSecret id="password" value="#{registration.password}" required="true" />
+
+            <br/>
+                <h:outputLabel for="gender">Gender</h:outputLabel>
+                <h:selectOneMenu id="gender" value="#{registration.gender}">
+                    <f:selectItem itemValue="Male" itemLabel="Male" />
+                    <f:selectItem itemValue="Female" itemLabel="Female" />
+                </h:selectOneMenu>
+            <br/>
+
+
+                <h:outputLabel for="dateOfBirth">Date of Birth</h:outputLabel>
+                <h:inputText id="dateOfBirth" value="#{registration.dateOfBirth}" required="true" label="MM/YY/DD" />
+            <br/>
+
+                <h:commandButton value="Update" action="#{registration.update()}" class="btn btn-primary btn-block" />
+            <br/>
+            </h:form>
+
+    <br/>
+</h:body>
+
+</html>

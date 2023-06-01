@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+   <title>Login Page</title>
+</h:head>
+
+<h:body>
+   <div>
+      <h:form>
+         <h2>Login</h2>
+         <div>
+            <h:outputLabel for="username">username:</h:outputLabel>
+            <h:inputText id="username" value="#{loginBean.username}" required="true" />
+         </div>
+
+         <div>
+            <h:outputLabel for="password">Password:</h:outputLabel>
+            <h:inputSecret id="password" value="#{loginBean.password}" required="true" />
+         </div>
+
+         <h:commandButton value="Login" action="#{loginBean.login()}" />
+
+      </h:form>
+   </div>
+</h:body>
+
+</html>

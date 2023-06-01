@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<h:head>
+    <title>Welcome Page</title>
+</h:head>
+<h:body>
+    <div style="text-align: center; margin-top: 20vh;">
+        <h1>Welcome!</h1>
+        <h:form>
+            <h:commandButton value="Create an Account" action="register.xhtml?faces-redirect=true" />
+            <br/>
+            <h:commandButton value="Show Data" action="display.xhtml?faces-redirect=true" />
+            <br/>
+            <h:commandButton value="Login to Your Account" action="login.xhtml?faces-redirect=true" />
+        </h:form>
+    </div>
+</h:body>
+
+</html>
